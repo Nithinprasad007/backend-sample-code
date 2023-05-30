@@ -51,7 +51,7 @@ pipeline{
     
     stage('run artifact'){
         steps{
-            sh 'java -jar my-app-1.0-SNAPSHOT.jar'
+            sh 'java -jar demo-0.0.1-SNAPSHOT.jar'
         }
     }
   }
