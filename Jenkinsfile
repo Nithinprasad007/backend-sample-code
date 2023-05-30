@@ -44,7 +44,7 @@ pipeline{
                 def artifactoryUrl = 'http://192.168.20.115/artifacts'
                 sh 'curl -fL https://getcli.jfrog.io | sh'
                 sh 'export PATH="$PATH:$HOME/.jfrog/jfrog"'
-                sh 'jfrog rt dl example-repo-local/my-app-1.0-SNAPSHOT.jar'
+                sh 'jfrog rt dl test-repo-local/demo-0.0.1-SNAPSHOT.jar'
             }
         }
     }
