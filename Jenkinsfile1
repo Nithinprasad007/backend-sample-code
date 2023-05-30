@@ -35,7 +35,7 @@ pipeline{
     stage("Trigger Deployment") {
             steps {
                 // Trigger the deployment pipeline as a downstream job
-                build job: 'CD-pipeline', wait: false
+                build job: 'cd-triggered-by-ci', wait: false
             }
        }
   }
