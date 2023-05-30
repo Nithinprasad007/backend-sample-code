@@ -17,21 +17,21 @@ pipeline{
         }
     }
     
-    stage('jfrog'){
-        steps{
-            rtUpload (
-                serverId: 'jfrog',
-                spec: '''{
-                      "files": [
-                        {
-                           "pattern": "*.jar",
-                           "target": "test-repo-local"
-                        }
-                     ]
-                }'''
-            )
+    stage('jfrog') {
+            steps {
+                rtUpload (
+                    serverId: 'jfrog',
+                    spec: '''{
+                        "files": [
+                            {
+                                "pattern": "*.jar",
+                                "target": "test-repo-local"
+                            }
+                        ]
+                    }''',
+                )
+            }
         }
-    }
     stage("Trigger Deployment") {
             steps {
                 // Trigger the deployment pipeline as a downstream job
